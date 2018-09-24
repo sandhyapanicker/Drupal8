@@ -78,3 +78,4 @@ hidden:
   field_activity: true
   field_profession: true
   field_qualification: true
+  langcode: true

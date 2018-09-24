@@ -1,0 +1,34 @@
+uuid: f5ce0faa-eb7a-4cbe-a452-e1e5ff0fd47a
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:f26e6e32-1370-4c8b-9189-98086d17bf66'
+  module:
+    - block_content
+    - language
+  theme:
+    - bartik
+id: language
+theme: bartik
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:f26e6e32-1370-4c8b-9189-98086d17bf66'
+settings:
+  id: 'block_content:f26e6e32-1370-4c8b-9189-98086d17bf66'
+  label: Language
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  language:
+    id: language
+    langcodes:
+      en: en
+      fr: fr
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'
