@@ -1,0 +1,21 @@
+uuid: c0b287cd-f3dc-41b9-a8e6-ae122e2834b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.custom
+    - field.storage.block_content.field_interval
+  module:
+    - text
+id: block_content.custom.field_interval
+field_name: field_interval
+entity_type: block_content
+bundle: custom
+label: Interval
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

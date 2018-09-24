@@ -1,0 +1,20 @@
+uuid: 5c81cbc6-bd9f-455c-ad8b-c0d06b79b20e
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - node
+id: node.field_others
+field_name: field_others
+entity_type: node
+type: entity_reference
+settings:
+  target_type: block_content
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
