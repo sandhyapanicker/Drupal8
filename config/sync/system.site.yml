@@ -1,0 +1,14 @@
+uuid: f5714263-6781-472d-9e5c-75a74fce642f
+name: 'intro to d8'
+mail: sad@123.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
