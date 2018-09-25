@@ -1,0 +1,17 @@
+uuid: 562a7e34-a01d-4014-9509-36f31c2b4043
+langcode: en
+status: true
+dependencies: {  }
+id: dev
+label: dev
+folder: config/dev
+module:
+  devel: 0
+theme: {  }
+blacklist:
+  - dblog.settings
+graylist:
+  - system.site
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0
