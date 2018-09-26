@@ -1,0 +1,7 @@
+d8_routing.sample_hello_url:
+  path: '/hello-url'
+  defaults:
+    _controller: '\Drupal\d8_routing\Controller\RouteController::hello_url'
+    _title: 'Heelo World'
+  requirements:
+    _permission: 'access content'
