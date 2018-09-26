@@ -28,6 +28,59 @@ class SimpleForm extends FormBase {
 				'#type' => 'tel',
 				'#title' => t('Mobile no'),
 		);
+		$form['qualification'] = array (
+				'#type' => 'select',
+				'#title' => ('Qualification'),
+				'#options' => array(
+						'UG' => t('UG'),
+						'PG' => t('PG'),
+						'other' => t('Other'),
+				),
+		);
+		$form['country'] = array (
+				'#type' => 'select',
+				'#title' => ('Country'),
+				'#options' => array(
+						'india' => t('India'),
+						'uk' => t('UK'),
+				),
+		);
+		$form['india_states'] = array (
+				'#type' => 'select',
+				'#title' => ('State'),
+				'#options' => array(
+						'delhi' => t('Delhi'),
+						'bangalore' => t('Bangalore'),
+				),
+				'#states' => array(
+						'visible' => array(
+								':input[name="country"]' => array('value' => 'india')
+						),
+						),
+		);
+		$form['uk_states'] = array (
+				'#type' => 'select',
+				'#title' => ('State'),
+				'#options' => array(
+						'london' => t('London'),
+				),
+				'#states' => array(
+						'visible' => array(
+								':input[name="country"]' => array('value' => 'uk')
+						),
+				),
+		);
+		$form['qualification_other'] = array(
+				'#type' => 'textfield',
+				'#title' => t('Qualification Other'),
+				'#size' => 60,
+				'#max_length' => 128,
+				'#states' => array(
+				  'visible' => array(
+					 ':input[name="qualification"]' => array('value' => 'other')
+				),
+		  ),
+		);
 		$form['submit'] = array(
 				'#type' => 'submit',
 				'#value' => t('Submit'),
