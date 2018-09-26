@@ -4,4 +4,20 @@ d8_routing.sample_hello_url:
     _controller: '\Drupal\d8_routing\Controller\RouteController::hello_url'
     _title: 'Heelo World'
   requirements:
-    _permission: 'access content'
+    _permission: 'access training content'
+    
+d8_routing.sample_hello_dynamic_url:
+  path: '/hello-url/{name}'
+  defaults:
+    _controller: '\Drupal\d8_routing\Controller\RoutingControllerDynamic::helloUrlDynamic'
+    _title_callback: '\Drupal\d8_routing\Controller\RoutingControllerDynamic::helloUrlDynamicTitleCallback'
+  requirements:
+    _permission: 'access training content'
+    
+d8_routing.entity_hello_dynamic_url:
+  path: '/hello-name/{user}'
+  defaults:
+    _controller: '\Drupal\d8_routing\Controller\RoutingControllerDynamic::EntityUrlDynamic'
+    _title_callback: '\Drupal\d8_routing\Controller\RoutingControllerDynamic::EntityUrlDynamicTitleCallback'
+  requirements:
+    _permission: 'access training content'

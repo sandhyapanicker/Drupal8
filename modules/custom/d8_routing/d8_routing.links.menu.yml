@@ -1,0 +1,34 @@
+d8_routing.sample_hello_url:
+    title: 'Hello World'
+    description: 'Menu link for hello world page'
+    route_name: d8_routing.sample_hello_url
+    expanded: 1
+    menu_name: main
+    weight: 100
+    
+d8_routing.sample_hello_dynamic_url:
+    title: 'Hello Sandhya'
+    description: 'Menu link for hello world page'
+    parent: d8_routing.sample_hello_url
+    route_name: d8_routing.sample_hello_dynamic_url
+    route_parameters: {name: 'Sandhya' }
+    expanded: 1
+    menu_name: main
+    weight: 10
+    
+d8_routing.entity_hello_dynamic_url:
+    title: 'Hello User'
+    description: 'Menu link for hello world page'
+    parent: d8_routing.sample_hello_url
+    route_name: d8_routing.entity_hello_dynamic_url
+    route_parameters: {user: 2}
+    expanded: 1
+    menu_name: main
+    weight: 11
+    
+ d8_routing.custom_system.user_menu:
+  title: User Menu
+  route_name: d8_routing.entity_hello_dynamic_url
+  parent: system.admin
+  description: 'User menu custom.'
+  weight: 9

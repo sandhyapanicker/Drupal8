@@ -1,0 +1,4 @@
+sd8_routing.custom_system.user_menu:
+  route_name: d8_routing.entity_hello_dynamic_url
+  title: Settings
+  base_route: system.rss_feeds_settings
