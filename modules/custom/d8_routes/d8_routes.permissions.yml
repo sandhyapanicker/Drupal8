@@ -1,0 +1,4 @@
+access training content:
+  title: 'Access training content'
+  description: 'Allow access to my content'
+  restrict access: true

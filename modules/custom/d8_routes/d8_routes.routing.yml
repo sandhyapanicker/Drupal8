@@ -1,0 +1,46 @@
+
+d8_routes.route_controller_hello_world:
+  path: 'hello_world'
+  defaults:
+    _controller: '\Drupal\d8_routes\Controller\RouteController::hello_world'
+    _title: 'Hello World'
+  requirements:
+    _permission: 'access content'
+
+d8_routes.route_controller_helloWorldDynamic:
+  path: '/hello_world/{name}'
+  defaults:
+    _controller: '\Drupal\d8_routes\Controller\RouteController::helloWorldDynamic'
+    _title: 'Hello Dynamic'
+  requirements:
+    _permission: 'access content'
+d8_routes.route_controller_helloWorldName:
+  path: '/hello_world_new/{name}'
+  defaults:
+    _controller: '\Drupal\d8_routes\Controller\RouteController::helloWorldName'
+    _title: 'Hello Dynamic Test'
+  requirements:
+    _permission: 'access content'
+d8_routes.route_controller_helloWorldDyn:
+  path: 'hello_World_test/{name}'
+  defaults:
+    _controller: '\Drupal\d8_routes\Controller\RouteController::helloWorldDyn'
+    _title: 'tst'
+  requirements:
+    _permission: 'access content'
+d8_routes.route_controller_test:
+  path: '/d8_routes/test'
+  defaults:
+    _controller: '\Drupal\d8_routes\Controller\RouteController::test'
+    _title: 'TT'
+  requirements:
+    _permission: 'access content'
+
+d8_routes.simple_form:
+  path: 'simple_form'
+  defaults:
+    _form: '\Drupal\d8_routes\Form\SimpleForm'
+    _title: 'SimpleForm'
+  requirements:
+    _access: 'TRUE'
+  
