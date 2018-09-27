@@ -29,3 +29,19 @@ d8_routing.entity_list_dynamic_url:
     _title: 'Node & author'
   requirements:
     _custom_access: '\Drupal\d8_routing\Controller\RoutingControllerDynamic::listNodeAccess'
+    
+d8_routing.simple_form:
+  path: '/simple-form'
+  defaults:
+    _form: '\Drupal\d8_routing\Form\SimpleForm'
+    _title: 'Simple Form'
+  requirements:
+    _permission: 'access content'
+
+d8_routing.di_form:
+  path: '/di-form'
+  defaults:
+    _form: '\Drupal\d8_routing\Form\DIForm'
+    _title: 'DI Form'
+  requirements:
+    _permission: 'access content'

@@ -4,17 +4,21 @@ namespace Drupal\d8_routing\Controller;
 use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\Database\Connection;
+use Drupal\Component\EventDispatcher\ContainerAwareEventDispatcher;
 
 class DataController implements ContainerInjectionInterface {
 	protected $db;
+	protected $dispatcher;
 	
-	public function __construct(Connection $db) {
+	public function __construct(Connection $db, ContainerAwareEventDispatcher $dispatcher) {
 		$this->db = $db;
+		$this->dispatcher = $dispatcher;
 	}
 	
 	public static function create(ContainerInterface $container) {
 		return new static(
-				$container->get('database')
+				$container->get('database'),
+				$container->get('event_dispatcher')
 				);
 	}
 	public function getResult() {
@@ -33,6 +37,10 @@ class DataController implements ContainerInjectionInterface {
 				'firstname' => $first_name,
 		])
 		->execute();
+		$this->dispatcher->dispatch(
+				DataEntryEvent::DATA_INSERT,
+				new DataEntryEvent($first_name, $last_name)
+				);
 	}
 	
 }
