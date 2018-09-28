@@ -1,0 +1,17 @@
+name: myd8
+type: theme
+description: 'My Awesome theme'
+package: Other
+core: 8.x
+libraries:
+  - myd8/global-styling
+ 
+base theme: classy
+#Using Classy as a base theme https://www.drupal.org/theme-guide/8/classy
+
+regions:
+  header: Header
+  footer: Footer
+  content: Content
+  navigation: navigation
+  aisle: aisle

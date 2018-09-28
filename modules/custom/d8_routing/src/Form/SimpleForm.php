@@ -81,6 +81,15 @@ class SimpleForm extends FormBase {
 				),
 		  ),
 		);
+		$form['file_upload'] = array(
+				'#type' => 'managed_file',
+				'#title' => t('Upload file:'),
+				'#required' => TRUE,
+				'#upload_validators'    => [
+						'file_validate_extensions'    => array('csv'),
+						'd8_routing_validate_csv'=>array(),
+				],
+		);
 		$form['submit'] = array(
 				'#type' => 'submit',
 				'#value' => t('Submit'),

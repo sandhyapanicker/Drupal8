@@ -1,0 +1,9 @@
+global-styling:
+   version: 1.0
+   css:
+    theme:
+      css/test.css:{
+        media:screen
+      }
+   js:
+     #js/your_js.js : {}

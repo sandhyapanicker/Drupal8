@@ -1,0 +1,10 @@
+function d8_routing_validate_csv(FileInterface $file) {
+  $errors = [];
+
+  $name = $file->getFilename();
+  if (strpos($name, 'dipak.csv') == FALSE) {
+    $errors[] = 'Only files named dipak.csv will be accepted';
+  }
+
+  return $errors;
+}
